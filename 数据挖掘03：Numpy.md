@@ -13,6 +13,11 @@ Numpy的并行化运算
 应用Numpy实现数组之间合并、分割
 应用Numpy的IO操作实现文件的读取、存储
 ```
+## 0、速查
+
+[Numpy中文文档与API](https://www.numpy.org.cn/)
+
+
 
 ## 1、Numpy与ndarray介绍
 ### 1.1 Numpy介绍

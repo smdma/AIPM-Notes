@@ -10,6 +10,9 @@
 >知道annotate或者text添加图的注释
 >知道animation实现动画的创建
 
+## 0、速查
+[Matplotlib中文文档](https://www.matplotlib.org.cn/)
+[Matplotlib官方文档](https://matplotlib.org/index.html)
 
 ## 1、Matplotlib图像的3层结构
 

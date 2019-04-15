@@ -1,6 +1,7 @@
+## 速查
+[Jupyter Notebook官方文档](https://jupyter-notebook.readthedocs.io/en/stable/)
 
-
-# 1 库的安装
+## 1、库的安装
 
 ## 学习目标
 
