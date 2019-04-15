@@ -75,7 +75,7 @@ Jupyter项目是一个非盈利的开源项目，源于2014年的ipython项目�
 - 是一款程序员和科学工作者的**编程/文档/笔记/展示**软件
 - **.ipynb**文件格式是用于计算型叙述的**JSON文档格式**的正式规范
 
-![jupyternotebook](./images/jupyternotebook.png)
+![jupyternotebook](../images/jupyternotebook.png)
 
 ## 1.2.2 为什么使用Jupyter Notebook?
 
@@ -119,12 +119,12 @@ jupyter notebook
 
 想让notebook打开指定目录，只要进入此目录后执行命令即可
 
-![notebook1](./images/notebook1.png)
+![notebook1](../images/notebook1.png)
 
 - 新建notebook文档
   - notebook的文档格式是`.ipynb`
 
-![img](./images/createnotebook.png)
+![img](../images/createnotebook.png)
 
 - 内容界面操作-helloworld
 
@@ -137,7 +137,7 @@ jupyter notebook
   - Restart & Clear Output，重启并清除所有输出
   - Restart & Run All，重启并重新运行所有代码
 
-![controlnotebook](./images/jupyter_helloworld.png)
+![controlnotebook](../images/jupyter_helloworld.png)
 
 ### 2 cell操作
 
@@ -156,7 +156,7 @@ Jupyter支持两种模式：
 
 #### 1）鼠标操作
 
-![工具栏cell](./images/工具栏cell.png)
+![工具栏cell](../images/工具栏cell.png)
 
 #### 2）快捷键操作
 
