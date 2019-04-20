@@ -121,13 +121,7 @@ Pandas的API：
 - df.median()：返回每一列的中位数
 - df.std()：返回每一列的标准差
 
-作者：Mervyn_2014
 
-链接：https://www.jianshu.com/p/a77b0bc736f2
-
-来源：简书
-
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 
 
@@ -477,12 +471,14 @@ data[['open', 'close']].apply(lambda x: x.max() - x.min(), axis=0)
   - y : label, position or list of label, positions, default None
     - Allows plotting of one column versus another
   - **kind : str**
-    - **‘line’** : line plot (default)
-    - **‘bar’** : vertical bar plot
-    - **‘barh’** : horizontal bar plot
-    - **‘hist’** : histogram
-    - **‘pie’** : pie plot
-    - **‘scatter’** : scatter plot
+    - **‘line’** : 折线图（默认）
+    - **‘bar’** : 垂直柱状图，加上stacked=True，为堆叠柱状图
+    - **‘barh’** : 水平柱状图
+    - **‘hist’** : 直方图
+    - **‘pie’** : 饼图
+    - **‘scatter’** : 散点图
+    - '**area**'：堆积面积图
+    - '**kde**'：密度图
 
 > 更多参数细节：<https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html?highlight=plot#pandas.DataFrame.plot>
 

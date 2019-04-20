@@ -16,8 +16,92 @@ Numpy的并行化运算
 ## 0、速查
 
 [Numpy中文文档与API](https://www.numpy.org.cn/)
+### 0.1 数组的创建
+从现有数组创建：
+array = np.array([list_1])  # 创建一个一维数组
+array = np.array([list_1, list_2])  # 创建一个二维数组
+array = np.array([[list_1,list_2],[list_3,list_4]]) # 创建一个三维数组
+array = np.asarray(a[, dtype, order])
+固定范围数组创建：
+array = np.linspace (start, stop, num, endpoint, retstep, dtype)
+array = np.arange(start, end, step) # step为步长，step为可选
+array = np..logspace(start,stop, num, endpoint, base, dtype)
+特殊数组创建：
+array = np.random.uniform(low, high, size) # 生成均匀分布的数组
+np.random.randint(low, high=None, size=None, dtype='l')
+array = np.random.randn(d0, d1, …, dn) # 正态分布
+array = np.random.normal(loc=0.0, scale=1.0, size=None) # 正态分布，loc为均值，scale为标准差，size为形状
+array = np.zeros(shape[, dtype, order]) # 全 1 数组
+array = np.zeros(shape[, dtype, order]) # 全 0 数组
+array = np.zeros([m,n]) # 全 0数组，形状为2\*3
+array = np.eye(n) # 单位数组，形状为n\*n
+
+### 0.2 数组的属性
+array.shape # 返回数组形状
+array.size # 返回数组元素个数
+array.dtype # 返回数组数据类型
+
+### 0.3 数组的访问
+array[n] # 取出数组的第1行/个数据
+array[m:n] # 取出第m到n-1行/个数据
+array[m][n] #取出数组第m行第n列数据
+array[m, n] #取出数组第m行第n列数据
+array[:m, n:] # 取出数组第0-m行第0-n列数据
+
+### 0.4 数组的运算
+此处的array也可以是数值的切片
+array[array > n] # 把array中大于n的标记为True，否则为False
+array[array > n] # m # 把array中大于n的标记为m
+np.all(array > n) # 判断array中是否全部大于n
+np.anyl(array > n) # 判断array中是否有大于n的
+np.where(array > n, x , y) # 把array中大于n的设为x，否则设为y
+np.where(np.logical_and(temp > n, temp < m), x, y) # 把array中大于n并且小于m的设为x，否则设为y
+np.where(np.logical_or(temp > n, temp < m), x, y) # 把array中大于n或者小于m的设为x，否则设为y
+np.min(a[, axis, out, keepdims]) # 此外还有max/median/mean/std/var等
+np.argmax(temp, axis=)
+np.argmin(temp, axis=)
 
 
+数组之间可以进行算术运算，但矩阵可能不行，2个矩阵之间相乘必须满足m\*n和n\*m
+数组之间进行乘法运算，需要满足2个数组维度相等，shape其中相对应的一个地方为1
+np.mat(array) # 把array数组转换成matrix矩阵对象
+
+### 0.5 数组常用函数
+np.unique(array) # 同行同列不重复的数组
+sum(array) # 对数组的列进行相加得出新数组
+sum(array[n]) # 返回数组的第n行数据的和
+sum(array[:, n]) # 返回数组所有行第n列数据的和
+array.max() # 返回数组中最大的数据
+max(array) # array为数组的切片，同sum()
+
+### 0.6 数组的合并、分割
+np.concatenate((a1, a2, ...), axis=0)
+np.hstack(tup) # column wise
+np.vstack(tup) # row wise
+np.split(ary, indices_or_sections, axis=0)  # 分割
+
+### 0.7 IO操作
+np.genfromtxt(fname[, delimiter, dtype, comments, ...]) 
+
+### 0.8 数组的序列化
+```python
+import pickle
+import numpy as np
+x = np.arange(10)
+f = open('x.pkl', 'wb')
+pickle.dump(x, f)
+!ls
+f = open('x.pkl', 'rb')
+pickle.load(f)
+np.save('one_array', x)
+np.load('one_array.npy')
+
+y = np.arange(20)
+np.savez('two_array.npz', a=x, b=y)
+c = np.load('two_array.npz')
+c['a']
+c['b']
+```
 
 ## 1、Numpy与ndarray介绍
 ### 1.1 Numpy介绍
@@ -1029,9 +1113,32 @@ def fill_nan_by_column_mean(t):
 
 
 
+## 8、遗留问题
+
+### 8.1 DataFrame的iterrows
+
+```python
+data = {
+    'Country': ['China', 'India', 'Brazil'],
+    'Capital': ['Beijing', 'New Delhi', 'Brasilia'],
+    'Population': ['1432732201', '1303171635', '207847528']
+}
+df = DataFrame(data)
+# 1
+for row in df.iterrows():
+    print(row)
+# 2
+for row in df.iterrows():
+    print(row[0], row[1])
+    break
+# 2种输出结果一样
+```
+
+问题：iterrows到底是什么
 
 
 
+### 8.2 pd.read_clipboard()的语法
 
 
 

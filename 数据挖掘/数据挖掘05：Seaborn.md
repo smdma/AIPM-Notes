@@ -1,8 +1,7 @@
 # Seaborn
 
 Seaborn是一个以matplotlib为底层，更容易定制化作图的库。
-安装seaborn的方法：
-pip install seaborn
+
 
 **Pandas与Seaborn之间的区别：**
 1. 在只需要简单地作图时直接用Pandas，但要想做出更加吸引人，更丰富的图就可以使用Seaborn
@@ -12,6 +11,68 @@ pip install seaborn
 
 ## 0、速查
 [Seaborn官方文档](http://seaborn.pydata.org/api.html)
+
+pip install seaborn
+
+import seaborn as sns
+
+df = sns.load_dataset('flights')
+
+sns.heatmap(df) # 热力图
+
+sns.heatmap(df, annot=True, fmt='d') # 热力图+数字显示
+
+sns.jointplot('AMZN','GOOG', data, kind='scatter')
+
+sns.pairplot(data.dropna())
+
+sns.distplot(s1, bins=20, hist=True, kde=False, rug=True)
+
+sns.kdeplot(s1, shade=True, color='r')
+
+sns.plt.hist(s1)
+
+sns.rugplot()
+
+df.plot(kind=) # 折线图
+
+**调色功能：**
+
+sns.color_palette()   #RGB
+
+sns.palplot(sns.color_palette()) # 默认线条颜色类型
+
+pal_style = ['deep', 'muted', 'pastel', 'bright', 'dark','colorblind']
+
+sns.palplot(sns.color_palette('dark')) # 更改线条颜色类型
+
+sns.set_palette(sns.color_palette('dark')) # 设置线条颜色
+
+sns.set() # 清空原有设置
+
+**设置图形显示效果：**
+
+style = ['darkgrid', 'dark', 'white','whitegrid', 'tricks']
+
+sns.**set_style**(style[0], {'grid.color': 'red'})  # 设置效果
+
+sns.**axes_style**() # 返回显示效果的配置
+
+sns.**set**() # 清空原有设置
+
+context = ['paper', 'notebook', 'talk', 'poster']
+
+sns.**set_context**(context[1], rc={'grid.linewidth': 3.0}) # 设置效果
+
+sns.**plotting_context**() # 返回显示效果的配置
+
+sns.palplot(sns.color_palette('hls', 8)) # 设置8个颜色
+
+
+
+data['字段'].quantile(0.05) # 置信度
+
+
 
 ### 关系图
 

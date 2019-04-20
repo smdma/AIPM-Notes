@@ -14,6 +14,9 @@
 [Matplotlib中文文档](https://www.matplotlib.org.cn/)
 [Matplotlib官方文档](https://matplotlib.org/index.html)
 
+
+
+
 ## 1、Matplotlib图像的3层结构
 
 ![img](../images/matplotlib图像结构.jpeg)
@@ -109,7 +112,7 @@
 - 知道如何设置多个axes的标题、刻度
 - 知道折线图的应用场景
 
-### 3.1 pytplot语法
+### 3.1 ★pytplot语法★
 
 matplotlib.pytplot包含了一系列类似于matlab的画图函数。
 
@@ -203,7 +206,7 @@ import matplotlib.pyplot as plt
 # 画出温度变化图
 import random
 import matplotlib.pyplot as plt
-%matplotlib inline
+%matplotlib inline # 使其能够在jupyter中显示图像
 
 # 准备x, y坐标的数据
 x = range(60)

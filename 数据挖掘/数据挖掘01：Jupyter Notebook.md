@@ -75,8 +75,6 @@ Jupyter项目是一个非盈利的开源项目，源于2014年的ipython项目�
 - 是一款程序员和科学工作者的**编程/文档/笔记/展示**软件
 - **.ipynb**文件格式是用于计算型叙述的**JSON文档格式**的正式规范
 
-![jupyternotebook](../images/jupyternotebook.png)
-
 ## 1.2.2 为什么使用Jupyter Notebook?
 
 - 传统软件开发：工程／目标明确
@@ -88,17 +86,7 @@ Jupyter项目是一个非盈利的开源项目，源于2014年的ipython项目�
 
 实时运行的代码、叙事性的文本和可视化被整合在一起，方便使用代码和数据来讲述故事
 
-**对比Jupyter Notebook和Pycharm**
-
-- 画图
-
-![img](./images/展示1.png)
-
-- 数据展示
-
-  ![img](./images/展示2.png)
-
-  - 总结：Jupyter Notebook 相比 Pycharm、Ipython在画图和数据展示方面更有优势。
+- Jupyter Notebook 相比 Pycharm、Ipython在画图和数据展示方面更有优势。
 
 ## 1.2.3 Jupyter Notebook的使用-helloworld
 
@@ -122,7 +110,7 @@ jupyter notebook
 ![notebook1](../images/notebook1.png)
 
 - 新建notebook文档
-  - notebook的文档格式是`.ipynb`
+  - notebook的文档格式是`.ipynb`
 
 ![img](../images/createnotebook.png)
 
@@ -160,9 +148,14 @@ Jupyter支持两种模式：
 
 #### 2）快捷键操作
 
-- 两种模式通用快捷键
-  - **Shift+Enter，执行本单元代码，并跳转到下一单元**
-  - **Ctrl+Enter，执行本单元代码，留在本单元**
+- 通用快捷键
+  - **Shift+Enter：执行本单元代码，并跳转到下一单元**
+  - **Ctrl+Enter：执行本单元代码，留在本单元**
+  - Esc + O：在cell和输出结果间切换
+  - Esc + F：在代码中查找、替换，忽略输出
+  - Shift + M：合并cell
+  - Shift + J 或 Shift + Down：选择下一个cell
+  - Shift + K 或 Shift + Up：选择上一个cell
 
 cell行号前的 * ，表示代码正在运行
 
@@ -192,3 +185,5 @@ cell行号前的 * ，表示代码正在运行
   - 为一行或多行代码添加/取消注释：`Ctrl+/`（Mac:CMD+/）
   - 屏蔽自动输出信息：可在最后一条语句之后加一个分号
 
+- 可使用Linux命令
+  - **!+命令**，可执行Linux命令
