@@ -107,12 +107,12 @@ jupyter notebook
 
 想让notebook打开指定目录，只要进入此目录后执行命令即可
 
-![notebook1](../images/notebook1.png)
+![notebook1](./images/notebook1.png)
 
 - 新建notebook文档
   - notebook的文档格式是`.ipynb`
 
-![img](../images/createnotebook.png)
+![img](./images/createnotebook.png)
 
 - 内容界面操作-helloworld
 
@@ -125,7 +125,7 @@ jupyter notebook
   - Restart & Clear Output，重启并清除所有输出
   - Restart & Run All，重启并重新运行所有代码
 
-![controlnotebook](../images/jupyter_helloworld.png)
+![controlnotebook](./images/jupyter_helloworld.png)
 
 ### 2 cell操作
 
@@ -144,7 +144,7 @@ Jupyter支持两种模式：
 
 #### 1）鼠标操作
 
-![工具栏cell](../images/工具栏cell.png)
+![工具栏cell](./images/工具栏cell.png)
 
 #### 2）快捷键操作
 
@@ -186,4 +186,12 @@ cell行号前的 * ，表示代码正在运行
   - 屏蔽自动输出信息：可在最后一条语句之后加一个分号
 
 - 可使用Linux命令
+
   - **!+命令**，可执行Linux命令
+
+- 在命令或函数后加 **?** 或 **??** 可查看命令/函数详情
+
+  - 如：pwd?、random?
+
+
+

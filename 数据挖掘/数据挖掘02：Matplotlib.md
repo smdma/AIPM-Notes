@@ -19,7 +19,7 @@
 
 ## 1、Matplotlib图像的3层结构
 
-![img](../images/matplotlib图像结构.jpeg)
+![img](./images/matplotlib图像结构.jpeg)
 
 ### 1.1 容器层
 
@@ -41,19 +41,19 @@
 
 - 一个axes(坐标系/绘图区)可以包含多个axis(坐标轴)，包含两个即为2d坐标系，3个即为3d坐标系 
 
-  ![artist](../images/artist.png)
+  ![artist](./images/artist.png)
 
 ### 1.2 辅助显示层
 
 辅助显示层为Axes(绘图区)内的除了根据数据绘制出的图像以外的内容，主要包括**Axes外观(facecolor)、边框线(spines)、坐标轴(axis)、坐标轴名称(axis label)、坐标轴刻度(tick)、坐标轴刻度标签(tick label)、网格线(grid)、图例(legend)、标题(title)**等内容。
 
-![img](../images/辅助显示层.jpeg)
+![img](./images/辅助显示层.jpeg)
 
 ### 1.3 图像层
 
 图像层指Axes内通过**plot、scatter、bar、histogram、pie**等函数根据数据绘制出的图像。
 
-![img](../images/图像层.jpeg)
+![img](./images/图像层.jpeg)
 
 - 总结：
   - Canvas（画板）位于最底层，用户一般接触不到
@@ -69,31 +69,31 @@
 
   **特点：能够显示数据的变化趋势，反映事物的变化情况。(变化)**
 
-  ![img](../images/%E6%8A%98%E7%BA%BF%E5%9B%BE%E6%84%8F%E4%B9%89.png)
+  ![img](./images/%E6%8A%98%E7%BA%BF%E5%9B%BE%E6%84%8F%E4%B9%89.png)
 
 - 散点图：用两组数据构成多个坐标点，考察坐标点的分布,判断两变量之间是否存在某种关联或总结坐标点的分布模式。
 
   **特点：判断变量之间是否存在数量关联趋势,展示离群点(分布规律)**
 
-  ![img](../images/%E6%95%A3%E7%82%B9%E5%9B%BE%E6%84%8F%E4%B9%89.png)
+  ![img](./images/%E6%95%A3%E7%82%B9%E5%9B%BE%E6%84%8F%E4%B9%89.png)
 
 - 柱状图：排列在工作表的列或行中的数据可以绘制到柱状图中。
 
   **特点：绘制连离散的数据,能够一眼看出各个数据的大小,比较数据之间的差别。(统计/对比)**
 
-  ![img](../images/%E6%9F%B1%E7%8A%B6%E5%9B%BE%E6%84%8F%E4%B9%89.png)
+  ![img](./images/%E6%9F%B1%E7%8A%B6%E5%9B%BE%E6%84%8F%E4%B9%89.png)
 
 - 直方图：由一系列高度不等的纵向条纹或线段表示数据分布的情况。 一般用横轴表示数据范围，纵轴表示分布情况。
 
   **特点：绘制连续性的数据展示一组或者多组数据的分布状况(统计)**
 
-  ![img](../images/%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%84%8F%E4%B9%89.png)
+  ![img](./images/%E7%9B%B4%E6%96%B9%E5%9B%BE%E6%84%8F%E4%B9%89.png)
 
 - 饼图：用于表示不同分类的占比情况，通过弧度大小来对比各种分类。
 
   **特点：分类数据的占比情况(占比)**
 
-  ![img](../images/%E9%A5%BC%E5%9B%BE%E6%84%8F%E4%B9%89.png)
+  ![img](./images/%E9%A5%BC%E5%9B%BE%E6%84%8F%E4%B9%89.png)
 
 
 
@@ -130,7 +130,7 @@ import matplotlib.pyplot as plt
 - 显示图例
   - **plt.legend**(loc="best")
   - 只在plt.plot()中设置label还不能最终显示出图例，还需要通过plt.legend()将图例显示出来。
-  ![legend](../images/legend.png)
+  ![legend](./images/legend.png)
 
 - 自定义x, y坐标刻度
     - 构造x, y刻度
@@ -254,7 +254,7 @@ plt.show()
 
 如果我们想要将上海和北京的天气图显示在同一个图的不同坐标系当中，效果如下：
 
-![img](../images/多次plot.png)
+![img](./images/多次plot.png)
 
 可以通过subplots函数实现(旧的版本中有subplot，使用起来不方便)，推荐subplots函数
 
@@ -348,7 +348,7 @@ plt.show()
 
   - plt.plot()除了可以画折线图，也可以用于画各种数学函数图像
 
-    ![img](../images/sin函数图像.png)
+    ![img](./images/sin函数图像.png)
 
 代码：
 
@@ -376,7 +376,7 @@ plt.show()
 
 如果没有解决过中文问题的话，会显示这个样子：
 
-![中文问题](../images/中文问题.png)
+![中文问题](./images/中文问题.png)
 
 #### 中文显示问题解决办法
 
@@ -482,7 +482,7 @@ axes.unicode_minus  : False
 
 需求：探究房屋面积和房屋价格的关系
 
-![img](../images/散点图绘制.png)
+![img](./images/散点图绘制.png)
 
 代码：
 
@@ -535,12 +535,12 @@ Returns:
 Container with all the bars and optionally errorbars.
 ```
 
-![柱状图](../images/柱状图.png)
+![柱状图](./images/柱状图.png)
 
 
 **需求1-对比每部电影的票房收入**
 
-![img](../images/电影票房收入对比.png)
+![img](./images/电影票房收入对比.png)
 
 ### 5.2 单个柱状图绘制
 
@@ -582,7 +582,7 @@ plt.show()
 
 效果如下：
 
-![首日首周票房对比](../images/电影票房收入对比2.png)
+![首日首周票房对比](./images/电影票房收入对比2.png)
 
 ### 5.3 对比柱状图绘制
 
@@ -629,7 +629,7 @@ plt.show()
 
 某校初三（1）班36位同学的身高的频数分布直方图如下图所示：
 
-![img](../images/初中直方图.png)
+![img](./images/初中直方图.png)
 
 （1）身高在哪一组的同学最多？
 
@@ -642,7 +642,7 @@ plt.show()
 
 ### 6.2 直方图与柱状图的对比
 
-![img](../images/直方图与柱状图对比.jpeg)
+![img](./images/直方图与柱状图对比.jpeg)
 
 - 柱状图是以矩形的长度表示每一组的频数或数量，其宽度(表示类别)则是固定的，**利于较小的数据集分析**。
 
@@ -656,7 +656,7 @@ plt.show()
 
    在直方图中，X轴上的变量是一个个连续的区间，这些区间通常表现为数字，例如代表苹果重量的“0-10g，10-20g……”，代表时间长度的“0-10min，10-20min……”。而在柱状图中，X轴上的变量是一个个分类数据，例如不同的国家名称、不同的游戏类型。
 
-  ![img](../images/直方图柱状图对比2.png)
+  ![img](./images/直方图柱状图对比2.png)
 
    直方图上的每根柱子都是**不可移动的**，X轴上的区间是连续的、固定的。而柱状图上的每根柱子是可以随意排序的，有的情况下需要按照分类数据的名称排列，有的则需要按照数值的大小排列。
 
@@ -670,15 +670,15 @@ plt.show()
 
   　　例如，美国人口普查局（The U.S. Census Bureau）调查了12.4亿人的上班通勤时间，由于通勤时间在45-150分钟的人数太少，因此区间改为45-60分钟、60-90分钟、90-150分钟，其他组距则均为5。
 
-  ![img](../images/组距不一表格.png)
+  ![img](./images/组距不一表格.png)
 
   　　可以看到，Y轴的数据为“人数/组距”，在这种情况下，每个柱子的面积相加就等于调查的总人数，柱子的面积就有了意义。
 
-  ![img](../images/组距不一图.png)
+  ![img](./images/组距不一图.png)
 
    当上图的Y轴表达的是“区间人数/总人数/组距”，这个直方图就是我们初中学习的“频率分布直方图”，频率指的是“区间数量/总数量”。在这样的直方图中，所有柱子的面积相加就等于1啦。
 
-  ![img](../images/直方图.png)
+  ![img](./images/直方图.png)
 
 ### 6.3 语法
 - matplotlib.pyplot.**hist**(x, bins=None, normed=None, **kwargs)
@@ -700,7 +700,7 @@ bins : integer or sequence or ‘auto’, optional
 
 效果：
 
-![电影时长分布](../images/电影时长分布.png)
+![电影时长分布](./images/电影时长分布.png)
 
 
 - 设置组距
@@ -744,9 +744,9 @@ plt.show()
 
  组距会影响直方图呈现出来的数据分布，因此在绘制直方图的时候需要多次尝试改变组距。
 
-![img](../images/组距较大.png)
+![img](./images/组距较大.png)
 
-![img](../images/组距较小.png)
+![img](./images/组距较小.png)
 
 **2. 注意Y轴所代表的变量**
 
@@ -767,7 +767,7 @@ plt.show()
 
 饼图广泛应用在各个领域，用于表示不同分类的占比情况，通过弧度大小来对比各种分类。饼图通过将一个圆饼按照分类的占比划分成多个区块，整个圆饼代表数据的总量，每个区块（圆弧）表示该分类占总体的比例大小，所有区块（圆弧）的加和等于 100%。
 
-![饼图](../images/饼图.png)
+![饼图](./images/饼图.png)
 
 ### 7.2 语法
 
@@ -784,7 +784,7 @@ plt.show()
 
 效果：
 
-![电影排片占比显示](../images/电影排片占比2.png)
+![电影排片占比显示](./images/电影排片占比2.png)
 
 
 代码：
@@ -814,7 +814,7 @@ plt.title("电影排片占比")
 plt.show()
 ```
 
-![排片占比](../images/电影排片占比1.png)
+![排片占比](./images/电影排片占比1.png)
 
 
 
@@ -822,7 +822,7 @@ plt.show()
 
 ## 8、总结
 ** 8.1 总结
-![img](../images/Matplotlib总结.png)
+![img](./images/Matplotlib总结.png)
 
 
 ** 8.2 每日作业
@@ -832,7 +832,7 @@ plt.show()
 - 增加阴影
 - 增加破裂效果
 
-![作业1](../images/作业1.png)
+![作业1](./images/作业1.png)
 
 ```python
 import matplotlib.pyplot as plt

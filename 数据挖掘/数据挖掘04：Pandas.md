@@ -491,7 +491,7 @@ data[['open', 'close']].apply(lambda x: x.max() - x.min(), axis=0)
 ## 7、文件读取与存储
 
 **最常用的HDF5和CSV文件**
-![读取存储](../images/读取存储.png)
+![读取存储](./images/读取存储.png)
 
 ### 7.1 CSV
 
@@ -593,7 +593,7 @@ json_read.to_json("./test.json", orient='records', lines=True)
       - True：会修改原数据
       - False：不替换修改原数据，生成新的对象
 - 不是缺失值nan，有默认标记的
-    ![问号缺失值](../images/问号缺失值.png)
+    ![问号缺失值](./images/问号缺失值.png)
 
     - 先替换'?'为np.nan
       - df.replace(to_replace=, value=)
@@ -624,7 +624,7 @@ json_read.to_json("./test.json", orient='records', lines=True)
 
 这样我们将数据分到了三个区间段，我可以对应的标记为矮、中、高三个类别，最终要处理成一个“哑变量”矩阵。
 
-![img](../images/身高数据离散化.png)
+![img](./images/身高数据离散化.png)
 
 
 ### 9.2 如何实现数据的离散化
@@ -726,7 +726,7 @@ dummies
 
 比如我们将刚才处理好的one-hot编码与原数据合并
 
-![股票哑变量合并](../images/股票哑变量合并.png)
+![股票哑变量合并](./images/股票哑变量合并.png)
 
 ```python
 # 按照行索引进行
@@ -766,7 +766,7 @@ right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
 result = pd.merge(left, right, on=['key1', 'key2'])
 ```
 
-![内连接](../images/内连接.png)
+![内连接](./images/内连接.png)
 
 - 左连接
 
@@ -774,7 +774,7 @@ result = pd.merge(left, right, on=['key1', 'key2'])
 result = pd.merge(left, right, how='left', on=['key1', 'key2'])
 ```
 
-![左连接](../images/左连接.png)
+![左连接](./images/左连接.png)
 
 - 右连接
 
@@ -782,7 +782,7 @@ result = pd.merge(left, right, how='left', on=['key1', 'key2'])
 result = pd.merge(left, right, how='right', on=['key1', 'key2'])
 ```
 
-![右连接](../images/右连接.png)
+![右连接](./images/右连接.png)
 
 - 外链接
 
@@ -790,7 +790,7 @@ result = pd.merge(left, right, how='right', on=['key1', 'key2'])
 result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
 ```
 
-![外链接](../images/外链接.png)
+![外链接](./images/外链接.png)
 
 
 ## 11、交叉表&透视表
@@ -862,12 +862,12 @@ data.pivot_table(['posi_neg'], index=['week'])
 
 交叉表与透视表也有分组的功能，算是分组的一种形式，只不过他们主要是计算次数或者计算比例！！看其中的效果：
 
-![分组效果](../images/分组效果.png)
+![分组效果](./images/分组效果.png)
 仔细观察这个结构，会发现与前面的MultiIndex结构类似。
 
 **什么是分组与聚合**
 
-![分组聚合原理](../images/分组聚合原理.png)
+![分组聚合原理](./images/分组聚合原理.png)
 
 **分组与聚合API**
 
@@ -897,7 +897,7 @@ col.groupby(['color'], as_index=False)['price1'].mean()
 ## 13、总结
 
 **13.1 总结**
-![img](../images/Pandas总结.png)
+![img](./images/Pandas总结.png)
 
 **13.2 作业1：现在我们有全球排名靠前的10000本书的数据，收据来源：**<https://www.kaggle.com/zygmunt/goodbooks-10k>
 
