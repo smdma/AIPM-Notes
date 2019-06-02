@@ -37,7 +37,7 @@ LeNet-5是一个CNN模型的开源组织，地址为http://yann.lecun.com/exdb/l
 
 卷积核我们可以理解为一个观察的人，**带着若干权重和一个偏置**去观察，进行特征加权运算。
 
-![卷积核加权计算](E:/%E5%AD%A6%E4%B9%A0/AIPM-Notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/images/%E5%8D%B7%E7%A7%AF%E6%A0%B8%E5%8A%A0%E6%9D%83%E8%AE%A1%E7%AE%97.png)
+![卷积核加权计算](./images/卷积核加权计算.png)
 
 > 注：上述要加上偏置
 
@@ -74,15 +74,15 @@ LeNet-5是一个CNN模型的开源组织，地址为http://yann.lecun.com/exdb/l
 
 零填充就是在图片像素外围填充一圈值为0的像素。
 
-![零填充](E:/%E5%AD%A6%E4%B9%A0/AIPM-Notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/images/%E9%9B%B6%E5%A1%AB%E5%85%85.gif)
+![零填充](./images/零填充.gif)
 
-![无零填充](E:/%E5%AD%A6%E4%B9%A0/AIPM-Notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/images/%E6%97%A0%E9%9B%B6%E5%A1%AB%E5%85%85.gif)
+![无零填充](./images/无零填充.gif)
 
 ### 2.6总结-输出大小计算公式
 
 如果已知输入图片形状，卷积核数量，卷积核大小，以及移动步长，那么输出图片形状如何确定？
 
-![卷积计算公式](E:/%E5%AD%A6%E4%B9%A0/AIPM-Notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/images/%E5%8D%B7%E7%A7%AF%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png)
+![卷积计算公式](./images/卷积计算公式.png)
 
 **卷积向下取整，池化向上取整。**
 
@@ -112,7 +112,7 @@ LeNet-5是一个CNN模型的开源组织，地址为http://yann.lecun.com/exdb/l
 
 如果是一张彩色图片，那么就有三种表分别为R，G，B。**原本每个人需要带一个3x3或者其他大小的卷积核，现在需要带3张3x3的权重和一个偏置，总共就27个权重。**最终每个人还是得出一张结果：
 
-![卷积网络动态演示](E:/%E5%AD%A6%E4%B9%A0/AIPM-Notes/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/images/%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C%E5%8A%A8%E6%80%81%E6%BC%94%E7%A4%BA.png)
+![卷积网络动态演示](./images/卷积网络动态演示.png)
 
 ## 3、激活函数
 
@@ -213,23 +213,6 @@ Pooling层主要的作用是特征提取，通过去掉Feature Map中不重要�
   - 目的：**提高网络泛化能力，防止过拟合**。
     - BN(Batch Normalization)也属于网络的一层，又称为归一化层。
     - 在一些大型网络当中使用Droupout，使得部分比例神经元失效。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
